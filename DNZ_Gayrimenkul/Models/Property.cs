@@ -11,10 +11,7 @@ namespace DNZ_Gayrimenkul.Models
     {
         public int ID { get; set; }
 
-        public int UserID { get; set; }
-
-        
-        public int AddressID { get; set; }
+        public int UserID { get; set; }      
         public int AdTypeID { get; set; }
         public int BuildingTypeID { get; set; }
         public int ConstructionTypeID { get; set; }

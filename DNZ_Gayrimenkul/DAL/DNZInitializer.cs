@@ -286,7 +286,77 @@ namespace DNZ_Gayrimenkul.DAL
             specifications.ForEach(s => context.Specifications.Add(s));
             context.SaveChanges();
 
+            var contacts = new List<Contact>
+            {
+            new Contact {Email="ceyhuntasci11@gmail.com", MessageType="Kiralık", Message="LÜTFEN", CellNo="5452961233" }
+            };
 
+            contacts.ForEach(s => context.Contacts.Add(s));
+          
+            var users = new List<User>
+            {
+            new User {FullName="Ceyhun Taşçı", Email="ceyhuntasci11@gmail.com", ProfilePictureUrl="", Password="123", SignupDate= DateTime.Now}
+            };
+
+            users.ForEach(s => context.Users.Add(s));
+            context.SaveChanges();
+
+            var properties = new List<Property>
+            {
+                new Property {
+                    UserID = 1,                  
+                    AdTypeID = 1,
+                    BuildingTypeID = 1,
+                    ConstructionTypeID = 1,
+                    CreditTypeID = 1,
+                    DeedStatusID = 1,
+                    FloorID = 1,
+                    FuelTypeID = 1,
+                    HeatingTypeID = 1,
+                    PropertyStatusID = 1,
+                    PropertyTypeID = 1,
+                    UsageStatusID  = 1,
+                    Title = "Test İlan",
+                    Price = 100000,
+                    ImageUrl = "",
+                    Description = "Test Açıklama",
+                    RoomCount = 3,
+                    HallCount = 1,
+                    BathCount = 2,
+                    M2 = 130,
+                    Age = 5,
+                    BuildingFloors = 15,
+                    TradeAvailable = true,
+                    StudentAvailable = true,
+                    LocatedInSite = true,
+                    North = true,
+                    South = true,
+                    East = true,
+                    West = true,
+                    IsFeatured = true,
+                    RentRevenue = 1200,
+                    MonthlyFee = 35
+                 }
+            };
+
+            properties.ForEach(s => context.Properties.Add(s));
+            context.SaveChanges();
+
+            var images = new List<Image>
+            {
+            new Image {Url="ceyhuntasci11@gmail.com", PropertyID=1}
+            };
+
+            images.ForEach(s => context.Images.Add(s));
+            context.SaveChanges();
+
+            var addresses = new List<Address>
+            {
+            new Address {PropertyID=1, Country="Türkiye", City="İstanbul", District="Kadıköy", Street="Acıbadem", Lat=10, Lon=10, ShowOnMap=true }
+            };
+
+            addresses.ForEach(s => context.Addresses.Add(s));
+            context.SaveChanges();
 
         }
     }
