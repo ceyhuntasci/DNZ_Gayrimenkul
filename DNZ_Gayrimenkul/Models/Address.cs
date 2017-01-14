@@ -9,7 +9,6 @@ namespace DNZ_Gayrimenkul.Models
 {
     public class Address
     {
-        public int ID { get; set; }
         [Key, ForeignKey("Property")]
         public int PropertyID { get; set; }
         public string Country { get; set; }
