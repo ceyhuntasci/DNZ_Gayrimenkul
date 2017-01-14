@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +10,8 @@ namespace DNZ_Gayrimenkul.Models
     public class Address
     {
         public int ID { get; set; }
+        [Key, ForeignKey("Property")]
+        public int PropertyID { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
         public string District { get; set; }

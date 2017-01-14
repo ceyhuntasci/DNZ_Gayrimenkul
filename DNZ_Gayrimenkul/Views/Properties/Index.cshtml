@@ -1,0 +1,231 @@
+﻿@model IEnumerable<DNZ_Gayrimenkul.Models.Property>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Address.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConstructionType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeedStatus.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Floor.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuelType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeatingType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyStatus.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsageStatus.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HallCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BathCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.M2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingFloors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TradeAvailable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentAvailable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocatedInSite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.North)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.South)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.East)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.West)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsFeatured)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RentRevenue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthlyFee)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConstructionType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeedStatus.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Floor.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FuelType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeatingType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PropertyStatus.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PropertyType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsageStatus.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HallCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BathCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.M2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingFloors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TradeAvailable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentAvailable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocatedInSite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.North)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.South)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.East)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.West)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsFeatured)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentRevenue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonthlyFee)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

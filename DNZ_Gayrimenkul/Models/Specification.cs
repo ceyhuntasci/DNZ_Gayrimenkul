@@ -9,6 +9,7 @@ namespace DNZ_Gayrimenkul.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public string SpecType { get; set; }
 
         public virtual ICollection<Property> Properties { get; set; }
     }
