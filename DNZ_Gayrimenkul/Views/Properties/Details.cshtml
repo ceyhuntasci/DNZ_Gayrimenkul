@@ -4,287 +4,624 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Property</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Address.Country)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address.Country)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AdType.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AdType.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BuildingType.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BuildingType.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ConstructionType.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ConstructionType.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CreditType.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreditType.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DeedStatus.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DeedStatus.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Floor.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Floor.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FuelType.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FuelType.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HeatingType.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HeatingType.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PropertyStatus.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PropertyStatus.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PropertyType.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PropertyType.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UsageStatus.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UsageStatus.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.User.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.User.FullName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AddressID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AddressID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ImageUrl)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.RoomCount)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.RoomCount)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HallCount)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HallCount)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BathCount)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BathCount)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.M2)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.M2)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Age)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BuildingFloors)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BuildingFloors)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TradeAvailable)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TradeAvailable)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.StudentAvailable)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.StudentAvailable)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LocatedInSite)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LocatedInSite)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.North)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.North)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.South)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.South)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.East)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.East)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.West)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.West)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.IsFeatured)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IsFeatured)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.RentRevenue)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.RentRevenue)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyFee)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyFee)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<section id='content' class='alternate-bg' style="padding-top:20px">
+    <section class='container'>
+        <section class='row featured-items'>
+            <section class='span9'>
+                <div class='property-box'>
+                    <div class='top'>
+                        <div class='row'>
+                            <div class='left'>
+                                <figure>
+                                    <a rel="prettyPhoto[gallery]" href="img/photos/4834194361_85d5c4a5e0_b.jpg">
+                                        <img src="img/photos/4834194361_85d5c4a5e0_b.jpg" alt="" />
+                                    </a>
+                                    <div class='banner'>For Rent</div>
+                                </figure>
+                                <div class='title-line'>
+                                    <div class='pull-left'>
+                                        <h2>Seaway house</h2> <br />
+                                        <p>Los Angeles, CA</p>
+                                    </div>
+                                    <div class='pull-right'>
+                                        <span class='price'>$345,000</span>
+                                    </div>
+                                </div>
+                                <div class='description'>
+                                    <p>Aliquam luctus, metus eu hendrerit bibendum, justo orci pulvinar enim, sed euismod risus tellus eu mi. Vivamus accumsan adipiscing leo quis suscipit. In hac habitasse platea dictumst.</p>
+                                </div>
+                            </div>
+                            <div class='right'>
+                                <h3>Gallery <span>(17 photos)</span></h3>
+                                <div class='gallery'>
+                                    <div class='line'>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834197589_84d75a42bd_b.jpg"><img src="img/photos/4834197589_84d75a42bd_b.jpg" alt="" /></a>
+                                        </figure>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834201025_e7f66118eb_b.jpg">
+                                                <img src="img/photos/4834201025_e7f66118eb_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class='line'>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834203945_3e56a09048_b.jpg">
+                                                <img src="img/photos/4834203945_3e56a09048_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834790926_0228ed6cde_b.jpg">
+                                                <img src="img/photos/4834790926_0228ed6cde_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class='line'>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834812234_3379989227_b.jpg">
+                                                <img src="img/photos/4834812234_3379989227_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834826842_cdeb5bc8be_b.jpg">
+                                                <img src="img/photos/4834826842_cdeb5bc8be_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class='line'>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="img/photos/4947806065_f932310392_b.jpg">
+                                                <img src="img/photos/4947806065_f932310392_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                        <figure>
+                                            <a rel="prettyPhoto[gallery]" href="img/photos/5363528563_f6cb539049_b.jpg">
+                                                <img src="img/photos/5363528563_f6cb539049_b.jpg" alt="" />
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <a rel="prettyPhoto[gallery]" class='more'>View all photos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='author-section big-margins'>
+                    <div class='left' style="width:100%">
+                        <section class="title">
+                            <div class="inner" style="border-radius: 4px; border-bottom: solid 1px #c3c5c9">
+                                <h2>İç Özellikler</h2>
+                            </div>
+                        </section>
+                        <div class='inner'>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='author-section big-margins'>
+                    <div class='left' style="width:100%">
+                        <section class="title">
+                            <div class="inner" style="border-radius: 4px; border-bottom: solid 1px #c3c5c9">
+                                <h2>Dış Özellikler</h2>
+                            </div>
+                        </section>
+                        <div class='inner'>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='author-section big-margins'>
+                    <div class='left' style="width:100%">
+                        <section class="title">
+                            <div class="inner" style="border-radius: 4px; border-bottom: solid 1px #c3c5c9">
+                                <h2>Konum</h2>
+                            </div>
+                        </section>
+                        <div class='inner'>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                            <div class='row'>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside class='span3'>
+                <section class='widget'>
+                    <section class='widget-title uppercase'>
+                        <div class='inner'>
+                            <h2>Özellikler</h2>
+                        </div>
+                    </section>
+                    <section class='widget-content'>
+                        <form action="">
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="location">Mimari</label>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Oda Sayısı</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Banyo Sayısı</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Metrekare</td>
+                                                <td>500</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="propertyType">Isınma</label>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Isınma Tipi</td>
+                                                <td>Merkezi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Yakıt Tipi</td>
+                                                <td>Doğalgaz</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="category">Bina Bilgisi</label>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Binanın Yaşı</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Binadaki Kat Sayısı</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bulunduğu Kat</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Site İçerisinde</td>
+                                                <td>Evet</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class='widget-section'>
+                                <div class='inner'>
+                                    <label for="minPrice">İletişim</label>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>  DNZ GAYRİMENKUL A.Ş</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Göktürk Merkez Mah. Cumhuriyet Cad. No:4/7 Göktürk/Eyüp/İst.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0 (212) 322 51 52</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0 (212) 322 51 52</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0 (212) 322 51 52</td>
+                                            </tr>
+                                            <tr>
+                                                <td>0 (212) 322 51 52</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+            </aside>
+        </section>
+    </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+    <div>
+        <h4>Property</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Address.Country)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address.Country)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AdType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AdType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BuildingType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BuildingType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ConstructionType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ConstructionType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreditType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreditType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DeedStatus.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DeedStatus.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Floor.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Floor.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FuelType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FuelType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HeatingType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HeatingType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PropertyStatus.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PropertyStatus.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PropertyType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PropertyType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UsageStatus.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UsageStatus.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User.FullName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AddressID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AddressID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ImageUrl)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RoomCount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RoomCount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HallCount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HallCount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BathCount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BathCount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.M2)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.M2)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BuildingFloors)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BuildingFloors)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TradeAvailable)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TradeAvailable)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentAvailable)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StudentAvailable)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LocatedInSite)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LocatedInSite)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.North)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.North)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.South)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.South)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.East)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.East)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.West)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.West)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IsFeatured)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsFeatured)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RentRevenue)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RentRevenue)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyFee)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyFee)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+*@

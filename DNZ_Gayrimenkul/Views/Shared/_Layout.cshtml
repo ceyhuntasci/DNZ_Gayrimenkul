@@ -3,40 +3,215 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>@ViewBag.Title - Unreal Estate</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="~/Content/css/vendor/bootstrap-select.css">
+    <link rel="stylesheet" href="~/Content/css/vendor/slider.css">
+    <link rel="stylesheet" href="~/Content/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+
+    <section id='hidden-header'>
+        <section class='container'>
+            <section class='row contact-form'>
+                <div class='span6'>
+                    <div class='login-form top-form'>
+                        <h2>Contact Form</h2>
+                        <p>Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.</p>
+                        <form action="" class='row'>
+                            <div class='span3'>
+                                <input type="text" class='input-block-level' name='name' placeholder="Name" />
+                            </div>
+                            <div class='span3'>
+                                <input type="email" class='input-block-level' name='email' placeholder="Email" />
+                            </div>
+                            <div class='span6'>
+                                <textarea name="message" class='input-block-level' rows="5" placeholder="Message"></textarea>
+                                <input type="submit" name='submit' value='Send' class='btn btn-primary' />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class='span6'>
+                    <div class='top-form addresses'>
+                        <h2>Location & Address</h2>
+                        <div class='map-container'>
+                            <iframe width="100%" height="180" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=Rainer+Ave,+Rowland+Heights,+Los+Angeles,+California+91748&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=42.495706,93.076172&amp;t=m&amp;ie=UTF8&amp;geocode=FcByBgIdVe34-A&amp;split=0&amp;hq=&amp;hnear=Rainer+Ave,+Rowland+Heights,+Los+Angeles,+California+91748&amp;ll=33.977033,-117.904072&amp;spn=0.024912,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+                        </div>
+                        <div class='row'>
+                            <div class='span3'>
+                                <address>
+                                    <strong>Head Office</strong> <br />
+                                    Reiner street 5, Los Angeles, CA 48523 <br />
+                                    Phone: +32 (0)2 494 01 28 <br />
+                                    Email: hidentica@gmail.com <br />
+                                </address>
+                            </div>
+                            <div class='span3'>
+                                <address>
+                                    <strong>Representative</strong> <br />
+                                    Winsont F. st. 10, New York, 48523 <br />
+                                    Phone: +32 (0)2 494 01 28 <br />
+                                    Email: hidentica@gmail.com <br />
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class='row profile-form'>
+                <div class='span6'>
+                    <div class='login-form top-form'>
+                        <h2>Login</h2>
+                        <p>Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.</p>
+                        <form action="" class='row'>
+                            <div class='span3'>
+                                <input type="text" class='input-block-level' name='username' placeholder="Username" />
+                            </div>
+                            <div class='span3'>
+                                <input type="password" class='input-block-level' name='username' placeholder="Password" />
+                                <input type="submit" name='submit' value='Login' class='btn btn-primary' />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class='span6'>
+                    <div class='login-form top-form'>
+                        <h2>Register</h2>
+                        <p>Quisque tincidunt ornare sapien, at commodo ante tristique non. Integer id tellus nisl. Donec eget nunc eget odio malesuada egestas.</p>
+                        <form action="" class='row'>
+                            <div class='span3'>
+                                <input type="text" class='input-block-level' name='username' placeholder="Username" />
+                                <input type="password" class='input-block-level' name='password' placeholder="Password" />
+                            </div>
+                            <div class='span3'>
+                                <input type="email" class='input-block-level' name='email' placeholder="Email" />
+                                <input type="password" class='input-block-level' name='confirm-password' placeholder="Confirm Password" />
+                                <input type="submit" name='submit' value='Register' class='btn btn-primary' />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <header style="margin-top: -20px">
+        <section class='container'>
+            <section class='row'>
+                <div class='span3'>
+                    <figure class='logo'>
+                        <a href="@Url.Action("Index", "Home")">
+                            <img src="~/Content/img/logo.png" alt="" />
+                        </a>
+                    </figure>
+                </div>
+                <div class='span6'>
+                    <nav class='main-nav'>
+                        <ul>
+                            <li class='active'><a href="@Url.Action("Index", "Home")">Ana Sayfa</a></li>
+                            <li><a href="@Url.Action("Index", "Home")">Hakkımızda</a></li>
+                            <li>
+                                <a href="@Url.Action("Index", "Home")">Portföy</a>
+                                <ul class='dropdown-menu'>
+                                    <li class='first-element'><a href="@Url.Action("Index", "Home")">Kiralık</a></li>
+                                    <li><a href="@Url.Action("Index", "Home")">Satılık</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="@Url.Action("Index", "Home")">Arama</a></li>
+                            <li><a href="@Url.Action("Index", "Home")">İletişim</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class='span3'>
+
+                </div>
+            </section>
+        </section>
+    </header>
+
+    <section id='main' role='main'>
+        <section class='container'>
+            @RenderBody()
+        </section>
+    </section>
+    <hr />
+    <section id='sub-footer'>
+        <section class='container'>
+            <section class='row'>
+                <div class='span3'>
+                    <figure class='logo'>
+                        <a href="@Url.Action("Index", "Home")">
+                            <img src="~/Content/img/logo-footer.png" alt="" />
+                        </a>
+                    </figure>
+                </div>
+                <div class='span6'>
+                    <div class='copyright'>
+                        <p>© 2017 Unreal Estate. All rights reserved. Developed by GalacticLynx</p>
+                    </div>
+                </div>
+                <div class='span3'>
+                    <div class='social-icons'>
+                        <a href="#" class='be'>Be</a>
+                        <a href="#" class='star'>Star</a>
+                        <a href="#" class='pinterest'>Pinterest</a>
+                        <a href="#" class='facebook'>Facebook</a>
+                        <a href="#" class='twitter'>Twitter</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+
+    @* <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div> *@
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+
+    <script src="~/Content/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="~/Content/js/vendor/bootstrap.js"></script>
+    <script src="~/Content/js/vendor/bootstrap-select.min.js"></script>
+    <script src="~/Content/js/vendor/jquery.flexslider-min.js"></script>
+    <script src="~/Content/js/vendor/bootstrap-slider.js"></script>
+    <script src="~/Content/js/vendor/jquery.mousewheel.min.js"></script>
+    <script src="~/Content/js/vendor/jquery.mCustomScrollbar.min.js"></script>
+    <script src="~/Content/js/vendor/tinynav.min.js"></script>
+    <script src="~/Content/js/vendor/jquery.placeholder.min.js"></script>
+    <script src="~/Content/js/vendor/gmap3.min.js"></script>
+    <script src="~/Content/js/main.js"></script>
 </body>
 </html>
