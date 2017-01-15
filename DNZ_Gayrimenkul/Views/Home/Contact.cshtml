@@ -1,17 +1,43 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<section id='content' class='alternate-bg'>
+    <section id="contact-form" style="border-top:0px">
+        <section class="container">
+            <section class="row">
+                <div class="span12">
+                    <div class="contact-box">
+                        <div class="title-bar">
+                            <div class="inner">
+                                <h2>Contact relevant estate agents &amp; new homes developers</h2>
+                                <p>Send a message to agents and developers matching your search for in using the box below.</p>
+                            </div>
+                        </div>
+                        <div class="contact-box-content">
+                            <div class="inner">
+                                <div class="full">
+                                    <form action="">
+                                        <label for="contact-name">Your Name</label>
+                                        <input type="text" name="contact-name" placeholder="John Smith" id="contact-name" class="input-block-level">
+                                        <label for="contact-message">Your Message</label>
+                                        <textarea name="contact-message" id="contact-message" class="input-block-level" rows="10" placeholder="Your message"></textarea>
+                                        <label for="contact-phone">Your Phone</label>
+                                        <input type="tel" name="contact-phone" placeholder="(XXX) XXX - XX - XX" id="contact-phone" class="input-block-level">
+                                        <label for="contact-email">Your Email</label>
+                                        <input type="email" name="contact-email" placeholder="example@example.com" id="contact-email" class="input-block-level">
+                                        <label class="checkbox">
+                                            <input type="checkbox"> Keep me informed on property market updates
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+</section>
+
