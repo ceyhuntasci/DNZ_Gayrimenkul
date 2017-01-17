@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="~/Content/css/vendor/slider.css">
     <link rel="stylesheet" href="~/Content/css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="~/Content/css/style.css">
-
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
 
@@ -119,7 +118,7 @@
                     <nav class='main-nav'>
                         <ul>
                             <li class='active'><a href="@Url.Action("Index", "Home")">Ana Sayfa</a></li>
-                            <li><a href="@Url.Action("Index", "Home")">Hakkımızda</a></li>
+                            <li><a href="@Url.Action("About", "Home")">Hakkımızda</a></li>
                             <li>
                                 <a href="@Url.Action("Index", "Home")">Portföy</a>
                                 <ul class='dropdown-menu'>
@@ -128,7 +127,7 @@
                                 </ul>
                             </li>
                             <li><a href="@Url.Action("Index", "Home")">Arama</a></li>
-                            <li><a href="@Url.Action("Index", "Home")">İletişim</a></li>
+                            <li><a href="@Url.Action("Contact", "Home")">İletişim</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -139,11 +138,8 @@
         </section>
     </header>
 
-    <section id='main' role='main'>
-        <section class='container'>
-            @RenderBody()
-        </section>
-    </section>
+    @RenderBody()
+     
     <hr />
     <section id='sub-footer'>
         <section class='container'>

@@ -318,7 +318,7 @@ namespace DNZ_Gayrimenkul.DAL
                     UsageStatusID  = 1,
                     Title = "Test İlan",
                     Price = 100000,
-                    ImageUrl = "",
+                    ImageUrl = "../Images/Uploads/4834201449_2801d96045_o-1.jpg",
                     Description = "Test Açıklama",
                     RoomCount = 3,
                     HallCount = 1,
