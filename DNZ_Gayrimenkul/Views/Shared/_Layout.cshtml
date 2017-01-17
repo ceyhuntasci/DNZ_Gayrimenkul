@@ -209,5 +209,12 @@
     <script src="~/Content/js/vendor/jquery.placeholder.min.js"></script>
     <script src="~/Content/js/vendor/gmap3.min.js"></script>
     <script src="~/Content/js/main.js"></script>
+
+    <script>
+    $(".main-nav li").on("click", function() {
+      $(".main-nav li").removeClass("active");
+      $(this).closest(".main-nav li").addClass("active");
+    });
+    </script>
 </body>
 </html>
