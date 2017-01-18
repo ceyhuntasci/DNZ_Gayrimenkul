@@ -88,7 +88,27 @@
                         </div>
                         <div class="tab-pane" id="tab2">
                             <div class='inner'>
-                                <form action="">
+                                
+                                @using (Html.BeginForm("SearchRent", "Search", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <select name="salon" class='span2 selectpicker search-select'>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                    <select name="oda" class='span2 selectpicker search-select'>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                    <input type="text" name='minFiyat' class='span2 search-price no-margin' placeholder="Min. Fiyat" />
+                                    <span class='line-divider'>&ndash;</span>
+                                    <input type="text" name='maxFiyat' class='span2 search-price' placeholder="Max. Fiyat" />
+                                    <button type="submit" class='btn btn-primary search-property'><i class="icon-search icon-white"></i> Ara</button>
+
+                                }
+                                @*<form action="">
                                     <select name="search-bedrooms" class='span2 selectpicker search-select'>
                                         <option>Salon</option>
                                         <option>1</option>
@@ -103,7 +123,7 @@
                                     <span class='line-divider'>&ndash;</span>
                                     <input type="text" name='search-max-price' class='span2 search-price' placeholder="Max. Fiyat" />
                                     <button type="submit" class='btn btn-primary search-property'><i class="icon-search icon-white"></i> Ara</button>
-                                </form>
+                                </form>*@
                             </div>
                         </div>
                         <div class="tab-pane" id="tab3">
