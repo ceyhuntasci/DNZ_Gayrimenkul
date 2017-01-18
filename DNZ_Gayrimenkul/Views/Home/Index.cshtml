@@ -171,253 +171,108 @@
                 <div class='featured-items-slider'>
                     <ul class='slides'>
                         <li>
-                            <div class='row'>
-                                @foreach (var i in Model.Properties)
+                                                      
+                                @for (int i = 0; i < Model.Properties.Count; i++)
                                 {
-                                    <div class='span3 featured-item-wrapper'>
-                                        <div class='featured-item'>
-                                            <div class='top'>
-                                                <div class='inner-border'>
-                                                    <div class='inner-padding'>
-                                                        <figure>
-                                                            <img style="height: 100%" src="@i.ImageUrl" alt="" />
-                                                            <div class='banner'>@i.AdType.Name</div>
-                                                            <a href="property.html" class='figure-hover'>Zoom</a>
-                                                        </figure>
-                                                        <h3><a href="property.html">@i.Title</a></h3>
-                                                        <p>@i.Address.Country, @i.Address.City</p>
+                                    if (i % 3 == 0)
+                                    {
+                                        <text>
+                                          <div class='row'>        
+                                            <div class='span3 featured-item-wrapper'>
+                                                <div class='featured-item'>
+                                                    <div class='top'>
+                                                        <div class='inner-border'>
+                                                            <div class='inner-padding'>
+                                                                <figure>
+                                                                    <img style="height: 100%" src="@Model.Properties.ElementAt(i).ImageUrl" alt="" />
+                                                                    <div class='banner'>@Model.Properties.ElementAt(i).AdType.Name</div>
+                                                                    <a href="@Url.Action("Details", "Properties", new { id = Model.Properties.ElementAt(i).ID })" class='figure-hover'>Zoom</a>
+                                                                </figure>
+                                                                <h3><a href="@Url.Action("Details", "Properties", new { id = Model.Properties.ElementAt(i).ID })">@Model.Properties.ElementAt(i).Title</a></h3>
+                                                                <p>@Model.Properties.ElementAt(i).Address.Country, @Model.Properties.ElementAt(i).Address.City</p>
+                                                            </div>
+                                                        </div>
+                                                        <i class='bubble'></i>
+                                                    </div>
+                                                    <div class='bottom'>
+                                                        <div class='inner-border'>
+                                                            <div class='inner-padding'>
+                                                                 <p>@Model.Properties.ElementAt(i).RoomCount oda  +  @Model.Properties.ElementAt(i).HallCount salon  +  @Model.Properties.ElementAt(i).M2 m2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>                                    
+                                                <div class='price-wrapper'>
+                                                    <div class='price'>$@Model.Properties.ElementAt(i).Price</div>                                          
+                                                </div>
+                                           </div>
+                                        </text>
+                                    }
+                                    else if (i % 4 == 3)
+                                    {
+                                        <div class='span3 featured-item-wrapper'>
+                                            <div class='featured-item'>
+                                                <div class='top'>
+                                                    <div class='inner-border'>
+                                                        <div class='inner-padding'>
+                                                            <figure>
+                                                                <img style="height: 100%" src="@Model.Properties.ElementAt(i).ImageUrl" alt="" />
+                                                                <div class='banner'>@Model.Properties.ElementAt(i).AdType.Name</div>
+                                                                <a href="@Url.Action("Details", "Properties", new { id = Model.Properties.ElementAt(i).ID })" class='figure-hover'>Zoom</a>
+                                                            </figure>
+                                                            <h3><a href="@Url.Action("Details", "Properties", new { id = Model.Properties.ElementAt(i).ID })">@Model.Properties.ElementAt(i).Title</a></h3>
+                                                            <p>@Model.Properties.ElementAt(i).Address.Country, @Model.Properties.ElementAt(i).Address.City</p>
+                                                        </div>
+                                                    </div>
+                                                    <i class='bubble'></i>
+                                                </div>
+                                                <div class='bottom'>
+                                                    <div class='inner-border'>
+                                                        <div class='inner-padding'>
+                                                            <p>@Model.Properties.ElementAt(i).RoomCount oda  +  @Model.Properties.ElementAt(i).HallCount salon  +  @Model.Properties.ElementAt(i).M2 m2</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <i class='bubble'></i>
                                             </div>
-                                            <div class='bottom'>
-                                                <div class='inner-border'>
-                                                    <div class='inner-padding'>
-                                                         <p>@i.RoomCount oda  +  @i.HallCount salon  +  @i.M2 m2</p>
+                                            <div class='price-wrapper'>
+                                                <div class='price'>$@Model.Properties.ElementAt(i).Price</div>
+                                            </div>
+                                        </div>
+                                         @:</div>
+                                    }
+                                    else
+                                    {
+                                        <div class='span3 featured-item-wrapper'>
+                                            <div class='featured-item'>
+                                                <div class='top'>
+                                                    <div class='inner-border'>
+                                                        <div class='inner-padding'>
+                                                            <figure>
+                                                                <img style="height: 100%" src="@Model.Properties.ElementAt(i).ImageUrl" alt="" />
+                                                                <div class='banner'>@Model.Properties.ElementAt(i).AdType.Name</div>
+                                                                <a href="@Url.Action("Details", "Properties", new { id = Model.Properties.ElementAt(i).ID })" class='figure-hover'>Zoom</a>
+                                                            </figure>
+                                                            <h3><a href="@Url.Action("Details", "Properties", new { id = Model.Properties.ElementAt(i).ID })">@Model.Properties.ElementAt(i).Title</a></h3>
+                                                            <p>@Model.Properties.ElementAt(i).Address.Country, @Model.Properties.ElementAt(i).Address.City</p>
+                                                        </div>
+                                                    </div>
+                                                    <i class='bubble'></i>
+                                                </div>
+                                                <div class='bottom'>
+                                                    <div class='inner-border'>
+                                                        <div class='inner-padding'>
+                                                            <p>@Model.Properties.ElementAt(i).RoomCount oda  +  @Model.Properties.ElementAt(i).HallCount salon  +  @Model.Properties.ElementAt(i).M2 m2</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>                                    
-                                        <div class='price-wrapper'>
-                                            <div class='price'>$@i.Price</div>                                          
-                                        </div>
-                                    </div>
-                                }
-                              
-                          
-                            </div>
-                            <div class='row'>
-                                <div class='span3 featured-item-wrapper'>
-                                    <div class='featured-item'>
-                                        <div class='top'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <figure>
-                                                        <img src="~/Content/img/photos/4834194361_85d5c4a5e0_b.jpg" alt="" />
-                                                        <div class='banner'>For Rent</div>
-                                                        <a href="property.html" class='figure-hover'>Zoom</a>
-                                                    </figure>
-                                                    <h3><a href="property.html">1 Central Park S</a></h3>
-                                                    <p>Las Vegas, NV</p>
-                                                </div>
-                                            </div>
-                                            <i class='bubble'></i>
-                                        </div>
-                                        <div class='bottom'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <p>3 beds  +  1 bath  +  100 sqft</p>
-                                                </div>
+                                            <div class='price-wrapper'>
+                                                <div class='price'>$@Model.Properties.ElementAt(i).Price</div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class='star-rating'>
-                                        <button class='star blue'>1 Star</button>
-                                        <button class='star active'>2 Star</button>
-                                        <button class='star active'>3 Star</button>
-                                        <button class='star'>4 Star</button>
-                                        <button class='star'>5 Star</button>
-                                    </div>
-                                    <div class='price-wrapper'>
-                                        <div class='price'>$2,150</div>
-                                        <div class='rate'>/mo</div>
-                                    </div>
-                                </div>
-                                <div class='span3 featured-item-wrapper'>
-                                    <div class='featured-item'>
-                                        <div class='top'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <figure>
-                                                        <img src="~/Content/img/photos/4834197589_84d75a42bd_b.jpg" alt="" />
-                                                        <div class='banner'>For Sale</div>
-                                                        <a href="property.html" class='figure-hover'>Zoom</a>
-                                                    </figure>
-                                                    <h3><a href="property.html">555 Malcolm X Blvd</a></h3>
-                                                    <p>Los Angeles, CA</p>
-                                                </div>
-                                            </div>
-                                            <i class='bubble'></i>
-                                        </div>
-                                        <div class='bottom'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <p>3 beds  +  1 bath  +  100 sqft</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='star-rating'>
-                                        <button class='star blue'>1 Star</button>
-                                        <button class='star active'>2 Star</button>
-                                        <button class='star active'>3 Star</button>
-                                        <button class='star'>4 Star</button>
-                                        <button class='star'>5 Star</button>
-                                    </div>
-                                </div>
-                                <div class='span3 featured-item-wrapper'>
-                                    <div class='featured-item'>
-                                        <div class='top'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <figure>
-                                                        <img src="~/Content/img/photos/4834201025_e7f66118eb_b.jpg" alt="" />
-                                                        <div class='banner'>For Rent</div>
-                                                        <a href="property.html" class='figure-hover'>Zoom</a>
-                                                    </figure>
-                                                    <h3><a href="property.html">520 W 110th St</a></h3>
-                                                    <p>Las Vegas, NV</p>
-                                                </div>
-                                            </div>
-                                            <i class='bubble'></i>
-                                        </div>
-                                        <div class='bottom'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <p>4 beds  +  2 baths  +  245 sqft</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='star-rating'>
-                                        <button class='star active'>1 Star</button>
-                                        <button class='star active'>2 Star</button>
-                                        <button class='star active'>3 Star</button>
-                                        <button class='star active'>4 Star</button>
-                                        <button class='star active'>5 Star</button>
-                                    </div>
-                                    <div class='price-wrapper'>
-                                        <div class='price'>$17,000</div>
-                                        <div class='rate'>/year</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class='row'>
-                                <div class='span3 featured-item-wrapper'>
-                                    <div class='featured-item'>
-                                        <div class='top'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <figure>
-                                                        <img src="~/Content/img/photos/4834194361_85d5c4a5e0_b.jpg" alt="" />
-                                                        <div class='banner'>For Rent</div>
-                                                        <a href="property.html" class='figure-hover'>Zoom</a>
-                                                    </figure>
-                                                    <h3><a href="property.html">1 Central Park S</a></h3>
-                                                    <p>Las Vegas, NV</p>
-                                                </div>
-                                            </div>
-                                            <i class='bubble'></i>
-                                        </div>
-                                        <div class='bottom'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <p>3 beds  +  1 bath  +  100 sqft</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='star-rating'>
-                                        <button class='star blue'>1 Star</button>
-                                        <button class='star active'>2 Star</button>
-                                        <button class='star active'>3 Star</button>
-                                        <button class='star'>4 Star</button>
-                                        <button class='star'>5 Star</button>
-                                    </div>
-                                    <div class='price-wrapper'>
-                                        <div class='price'>$2,150</div>
-                                        <div class='rate'>/mo</div>
-                                    </div>
-                                </div>
-                                <div class='span3 featured-item-wrapper'>
-                                    <div class='featured-item'>
-                                        <div class='top'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <figure>
-                                                        <img src="~/Content/img/photos/4834197589_84d75a42bd_b.jpg" alt="" />
-                                                        <div class='banner'>For Sale</div>
-                                                        <a href="property.html" class='figure-hover'>Zoom</a>
-                                                    </figure>
-                                                    <h3><a href="property.html">555 Malcolm X Blvd</a></h3>
-                                                    <p>Los Angeles, CA</p>
-                                                </div>
-                                            </div>
-                                            <i class='bubble'></i>
-                                        </div>
-                                        <div class='bottom'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <p>3 beds  +  1 bath  +  100 sqft</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='star-rating'>
-                                        <button class='star blue'>1 Star</button>
-                                        <button class='star active'>2 Star</button>
-                                        <button class='star active'>3 Star</button>
-                                        <button class='star'>4 Star</button>
-                                        <button class='star'>5 Star</button>
-                                    </div>
-                                </div>
-                                <div class='span3 featured-item-wrapper'>
-                                    <div class='featured-item'>
-                                        <div class='top'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <figure>
-                                                        <img src="~/Content/img/photos/4834201025_e7f66118eb_b.jpg" alt="" />
-                                                        <div class='banner'>For Rent</div>
-                                                        <a href="property.html" class='figure-hover'>Zoom</a>
-                                                    </figure>
-                                                    <h3><a href="property.html">520 W 110th St</a></h3>
-                                                    <p>Las Vegas, NV</p>
-                                                </div>
-                                            </div>
-                                            <i class='bubble'></i>
-                                        </div>
-                                        <div class='bottom'>
-                                            <div class='inner-border'>
-                                                <div class='inner-padding'>
-                                                    <p>4 beds  +  2 baths  +  245 sqft</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='star-rating'>
-                                        <button class='star active'>1 Star</button>
-                                        <button class='star active'>2 Star</button>
-                                        <button class='star active'>3 Star</button>
-                                        <button class='star active'>4 Star</button>
-                                        <button class='star active'>5 Star</button>
-                                    </div>
-                                    <div class='price-wrapper'>
-                                        <div class='price'>$17,000</div>
-                                        <div class='rate'>/year</div>
-                                    </div>
-                                </div>
-                            </div>
+                                    }
+                                }                                 
+                            </div>                       
                         </li>
                         <li>
                             <div class='row'>

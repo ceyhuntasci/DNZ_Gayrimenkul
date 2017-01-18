@@ -13,10 +13,9 @@
     <link rel="stylesheet" href="~/Content/css/vendor/bootstrap-select.css">
     <link rel="stylesheet" href="~/Content/css/vendor/slider.css">
     <link rel="stylesheet" href="~/Content/css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" href="~/Content/css/style.css">
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
-
+    <link rel="stylesheet" href="~/Content/css/style.css">   
+    <link rel="stylesheet" href="~/Content/css/prettyPhoto.css">
+    <script src="~/Content/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
 
@@ -117,17 +116,17 @@
                 <div class='span6'>
                     <nav class='main-nav'>
                         <ul>
-                            <li class='active'><a href="@Url.Action("Index", "Home")">Ana Sayfa</a></li>
-                            <li><a href="@Url.Action("About", "Home")">Hakkımızda</a></li>
-                            <li>
+                            <li class='@ViewBag.Home'><a href="@Url.Action("Index", "Home")">Ana Sayfa</a></li>
+                            <li class='@ViewBag.About'><a href="@Url.Action("About", "Home")">Hakkımızda</a></li>
+                            <li class='@ViewBag.Property'>
                                 <a href="@Url.Action("Index", "Home")">Portföy</a>
                                 <ul class='dropdown-menu'>
                                     <li class='first-element'><a href="@Url.Action("Index", "Home")">Kiralık</a></li>
                                     <li><a href="@Url.Action("Index", "Home")">Satılık</a></li>
                                 </ul>
                             </li>
-                            <li><a href="@Url.Action("Index", "Home")">Arama</a></li>
-                            <li><a href="@Url.Action("Contact", "Home")">İletişim</a></li>
+                            <li class='@ViewBag.Search'><a href="@Url.Action("Index", "Home")">Arama</a></li>
+                            <li class='@ViewBag.Contact'><a href="@Url.Action("Contact", "Home")">İletişim</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -208,13 +207,21 @@
     <script src="~/Content/js/vendor/tinynav.min.js"></script>
     <script src="~/Content/js/vendor/jquery.placeholder.min.js"></script>
     <script src="~/Content/js/vendor/gmap3.min.js"></script>
-    <script src="~/Content/js/main.js"></script>
-
+    <script src="~/Content/js/main.js"></script>    
+    <script src="~/Content/js/jquery.prettyPhoto.js"></script>
+   
     <script>
+            jQuery("a[rel^='prettyPhoto']").prettyPhoto({
+                social_tools: false,
+                theme: 'light_square'
+              });
+    </script>
+
+    @*<script>
     $(".main-nav li").on("click", function() {
       $(".main-nav li").removeClass("active");
       $(this).closest(".main-nav li").addClass("active");
     });
-    </script>
+    </script>*@
 </body>
 </html>

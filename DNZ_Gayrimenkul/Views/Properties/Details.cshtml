@@ -1,4 +1,4 @@
-﻿@model DNZ_Gayrimenkul.Models.Property
+﻿@model DNZ_Gayrimenkul.ViewModels.PropertyViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -13,75 +13,53 @@
                         <div class='row'>
                             <div class='left'>
                                 <figure>
-                                    <a rel="prettyPhoto[gallery]" href="img/photos/4834194361_85d5c4a5e0_b.jpg">
-                                        <img src="img/photos/4834194361_85d5c4a5e0_b.jpg" alt="" />
+                                    <a rel="prettyPhoto[gallery]" href="@Model.Property.ImageUrl">
+                                        <img src="@Model.Property.ImageUrl" alt="" />
                                     </a>
-                                    <div class='banner'>For Rent</div>
+                                    <div class='banner'>@Model.Property.AdType.Name</div>
                                 </figure>
                                 <div class='title-line'>
                                     <div class='pull-left'>
-                                        <h2>Seaway house</h2> <br />
-                                        <p>Los Angeles, CA</p>
+                                        <h2>@Model.Property.Title</h2> <br />
+                                        <p>@Model.Property.Address.District, @Model.Property.Address.City</p>
                                     </div>
                                     <div class='pull-right'>
-                                        <span class='price'>$345,000</span>
+                                        <span class='price'>$@Model.Property.Price</span>
                                     </div>
                                 </div>
                                 <div class='description'>
-                                    <p>Aliquam luctus, metus eu hendrerit bibendum, justo orci pulvinar enim, sed euismod risus tellus eu mi. Vivamus accumsan adipiscing leo quis suscipit. In hac habitasse platea dictumst.</p>
+                                    <p>@Model.Property.Description</p>
                                 </div>
                             </div>
                             <div class='right'>
-                                <h3>Gallery <span>(17 photos)</span></h3>
+                                <h3>Galeri <span>(@Model.Property.Images.Count fotoğraf)</span></h3>
                                 <div class='gallery'>
-                                    <div class='line'>
-                                        <figure>
-                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834197589_84d75a42bd_b.jpg"><img src="img/photos/4834197589_84d75a42bd_b.jpg" alt="" /></a>
-                                        </figure>
-                                        <figure>
-                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834201025_e7f66118eb_b.jpg">
-                                                <img src="img/photos/4834201025_e7f66118eb_b.jpg" alt="" />
-                                            </a>
-                                        </figure>
-                                    </div>
-                                    <div class='line'>
-                                        <figure>
-                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834203945_3e56a09048_b.jpg">
-                                                <img src="img/photos/4834203945_3e56a09048_b.jpg" alt="" />
-                                            </a>
-                                        </figure>
-                                        <figure>
-                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834790926_0228ed6cde_b.jpg">
-                                                <img src="img/photos/4834790926_0228ed6cde_b.jpg" alt="" />
-                                            </a>
-                                        </figure>
-                                    </div>
-                                    <div class='line'>
-                                        <figure>
-                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834812234_3379989227_b.jpg">
-                                                <img src="img/photos/4834812234_3379989227_b.jpg" alt="" />
-                                            </a>
-                                        </figure>
-                                        <figure>
-                                            <a rel="prettyPhoto[gallery]" href="img/photos/4834826842_cdeb5bc8be_b.jpg">
-                                                <img src="img/photos/4834826842_cdeb5bc8be_b.jpg" alt="" />
-                                            </a>
-                                        </figure>
-                                    </div>
-                                    <div class='line'>
-                                        <figure>
-                                            <a rel="prettyPhoto[gallery]" href="img/photos/4947806065_f932310392_b.jpg">
-                                                <img src="img/photos/4947806065_f932310392_b.jpg" alt="" />
-                                            </a>
-                                        </figure>
-                                        <figure>
-                                            <a rel="prettyPhoto[gallery]" href="img/photos/5363528563_f6cb539049_b.jpg">
-                                                <img src="img/photos/5363528563_f6cb539049_b.jpg" alt="" />
-                                            </a>
-                                        </figure>
-                                    </div>
-                                    <a rel="prettyPhoto[gallery]" class='more'>View all photos</a>
+                                    @for (int i = 0; i < Model.Property.Images.Count; i++)
+                                    {
+                                        if (i % 2 == 0)
+                                        {
+                                            <text>
+                                            <div class='line'>
+                                                <figure>
+                                                    <a rel="prettyPhoto[gallery]" href="@Model.Property.Images.ElementAt(i).Url"><img src="@Model.Property.Images.ElementAt(i).Url" alt="" /></a>
+                                               </figure>
+                                             </text>
+                                        }
+                                        else
+                                        {
+                                           
+                                                
+                                                    <figure>
+                                                        <a rel="prettyPhoto[gallery]" href="@Model.Property.Images.ElementAt(i).Url"><img src="@Model.Property.Images.ElementAt(i).Url" alt="" /></a>
+                                                    </figure>
+                                          
+                                            @:</div>
+                                            
+                                        }
+                                    }                           
+                                <a rel="prettyPhoto[gallery]" href="@Model.Property.Images.FirstOrDefault().Url" class='more'>Tüm Fotoğraflar</a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -94,30 +72,25 @@
                             </div>
                         </section>
                         <div class='inner'>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
+                            @for (int i = 0; i < Model.innerSpecs.Count; i++)
+                            {
+                                if (i % 4 == 0)
+                                {
+                                    <text>
+                                        <div class='row'>
+                                            <div class='span2'><i class="icon-check icon-green"></i>@Model.innerSpecs.ElementAt(i).Name</div>
+                                    </text>
+                                }
+                                else if (i % 4 == 3)
+                                {
+                                    <div class='span2'><i class="icon-check icon-green"></i>@Model.innerSpecs.ElementAt(i).Name</div>
+                                     @:</div>
+                                }
+                                else
+                                {
+                                    <div class='span2'><i class="icon-check icon-green"></i>@Model.innerSpecs.ElementAt(i).Name</div>
+                                }
+                            }                      
                         </div>
                     </div>
                 </div>
@@ -129,30 +102,25 @@
                             </div>
                         </section>
                         <div class='inner'>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
+                            @for (int i = 0; i < Model.outerSpecs.Count; i++)
+                            {
+                                if (i % 4 == 0)
+                                {
+                                    <text>
+                                        <div class='row'>
+                                            <div class='span2'><i class="icon-check icon-green"></i>@Model.outerSpecs.ElementAt(i).Name</div>
+                                    </text>
+                                }
+                                else if (i % 4 == 3)
+                                {
+                                    <div class='span2'><i class="icon-check icon-green"></i>@Model.outerSpecs.ElementAt(i).Name</div>
+                                    @:</div>
+                                }
+                                else
+                                {
+                                    <div class='span2'><i class="icon-check icon-green"></i>@Model.outerSpecs.ElementAt(i).Name</div>
+                                }
+                            }    
                         </div>
                     </div>
                 </div>
@@ -164,24 +132,25 @@
                             </div>
                         </section>
                         <div class='inner'>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
-                            <div class='row'>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                                <div class='span2'><i class="icon-check icon-green"></i>ADSL</div>
-                            </div>
+                            @for (int i = 0; i < Model.locationSpecs.Count; i++)
+                            {
+                                if (i % 4 == 0)
+                                {
+                                    <text>
+                                        <div class='row'>
+                                            <div class='span2'><i class="icon-check icon-green"></i>@Model.locationSpecs.ElementAt(i).Name</div>
+                                    </text>
+                                }
+                                else if (i % 4 == 3)
+                                {
+                                    <div class='span2'><i class="icon-check icon-green"></i>@Model.locationSpecs.ElementAt(i).Name</div>
+                                    @:</div>
+                                }
+                                else
+                                {
+                                    <div class='span2'><i class="icon-check icon-green"></i>@Model.locationSpecs.ElementAt(i).Name</div>
+                                }
+                            } 
                         </div>
                     </div>
                 </div>
@@ -202,15 +171,19 @@
                                         <tbody>
                                             <tr>
                                                 <td>Oda Sayısı</td>
-                                                <td>3</td>
+                                                <td>@Model.Property.RoomCount</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Salon Sayısı</td>
+                                                <td>@Model.Property.HallCount</td>
                                             </tr>
                                             <tr>
                                                 <td>Banyo Sayısı</td>
-                                                <td>2</td>
+                                                <td>@Model.Property.BathCount</td>
                                             </tr>
                                             <tr>
                                                 <td>Metrekare</td>
-                                                <td>500</td>
+                                                <td>@Model.Property.BathCount</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -223,11 +196,11 @@
                                         <tbody>
                                             <tr>
                                                 <td>Isınma Tipi</td>
-                                                <td>Merkezi</td>
+                                                <td>@Model.Property.HeatingType.Name</td>
                                             </tr>
                                             <tr>
                                                 <td>Yakıt Tipi</td>
-                                                <td>Doğalgaz</td>
+                                                <td>@Model.Property.FuelType.Name</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -240,19 +213,26 @@
                                         <tbody>
                                             <tr>
                                                 <td>Binanın Yaşı</td>
-                                                <td>10</td>
+                                                <td>@Model.Property.Age</td>
                                             </tr>
                                             <tr>
                                                 <td>Binadaki Kat Sayısı</td>
-                                                <td>4</td>
+                                                <td>@Model.Property.BuildingFloors</td>
                                             </tr>
                                             <tr>
                                                 <td>Bulunduğu Kat</td>
-                                                <td>3</td>
+                                                <td>@Model.Property.Floor.Name</td>
                                             </tr>
                                             <tr>
                                                 <td>Site İçerisinde</td>
-                                                <td>Evet</td>
+                                                <td>
+                                                @if (Model.Property.LocatedInSite)
+                                                {
+                                                    <text>Evet</text>
+                                                }
+                                                else {
+                                                     <text>Hayır</text>
+                                                }</td>
                                             </tr>
                                         </tbody>
                                     </table>
