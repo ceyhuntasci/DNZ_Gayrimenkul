@@ -23,6 +23,7 @@ namespace DNZ_Gayrimenkul.Controllers
             hvm.Properties = db.Properties.Include(p => p.Address).Include(p => p.AdType).Include(p => p.BuildingType).Include(p => p.ConstructionType).Include(p => p.CreditType).Include(p => p.DeedStatus).Include(p => p.Floor).Include(p => p.FuelType).Include(p => p.HeatingType).Include(p => p.PropertyStatus).Include(p => p.PropertyType).Include(p => p.UsageStatus).Include(p => p.User).ToList();
             hvm.Features = hvm.Properties.Where(p => p.IsFeatured == true).ToList();
 
+            ViewBag.Home = "active";
             return View(hvm);
         }
 
@@ -30,13 +31,14 @@ namespace DNZ_Gayrimenkul.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
+            ViewBag.About = "active";
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            ViewBag.Contact = "active";
             return View();
         }
     }

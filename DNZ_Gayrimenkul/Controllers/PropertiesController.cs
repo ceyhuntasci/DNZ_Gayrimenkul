@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using DNZ_Gayrimenkul.DAL;
 using DNZ_Gayrimenkul.Models;
+using DNZ_Gayrimenkul.ViewModels;
 
 namespace DNZ_Gayrimenkul.Controllers
 {
@@ -29,12 +30,20 @@ namespace DNZ_Gayrimenkul.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            PropertyViewModel pvm = new PropertyViewModel();
+
             Property property = db.Properties.Find(id);
+            pvm.Property = property;
+            pvm.innerSpecs = property.Specifications.Where(p => p.SpecType == "İç Özellikler").ToList();
+            pvm.outerSpecs = property.Specifications.Where(p => p.SpecType == "Dış Özellikler").ToList();
+            pvm.locationSpecs = property.Specifications.Where(p => p.SpecType == "Konum").ToList();
             if (property == null)
             {
                 return HttpNotFound();
             }
-            return View(property);
+
+            ViewBag.Property = "active";
+            return View(pvm);
         }
 
         // GET: Properties/Create
