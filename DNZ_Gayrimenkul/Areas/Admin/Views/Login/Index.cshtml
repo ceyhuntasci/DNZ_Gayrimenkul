@@ -1,0 +1,33 @@
+﻿﻿@model DNZ_Gayrimenkul.Models.User
+@{
+    ViewBag.Title = "Üye Girişi";
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DNZ Gayrimenkul Admin Panel</title>
+    <script src="~/Content/js/vendor/jquery-1.9.1.min.js"></script>
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/Content/css/signin.css" rel="stylesheet" />
+
+</head>
+
+    <div class="container">
+@using (Html.BeginForm())
+{
+        <form class="form-signin">
+            @Html.ValidationSummary(true, "Bilgileriniz yanlış. Tekrar Deneyiniz");
+            <img src="~/Content/img/logo.png" alt="" style="width: 30%; display: block; margin: auto" />
+            <h2 class="form-signin-heading">DNZ Gayrimenkul</h2>
+            <label for="inputEmail" class="sr-only">Email</label>
+            <input name="Email" type="email" id="inputEmail" class="form-control" placeholder="Email Adresi" required autofocus>
+            <label for="inputPassword" class="sr-only">Şifre</label>
+            <input name="Password" type="password" id="inputPassword" class="form-control" placeholder="Şifre" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Giriş Yap</button>
+        </form>
+}
+    </div>

@@ -27,6 +27,7 @@ namespace DNZ_Gayrimenkul.DAL
         public DbSet<PropertyType> PropertyTypes { get; set; }
         public DbSet<Specification> Specifications { get; set; }
         public DbSet<UsageStatus> UsageStatuses { get; set; }
+        public object User { get; internal set; }
         public DbSet<User> Users { get; set; }
 
 
