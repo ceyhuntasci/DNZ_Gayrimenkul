@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Galeri Ekle";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    Dropzone.options.myAwesomeDropzone = {
+        autoProcessQueue: false,
+        accept: function (file, done) {
+            if (file.name == "justinbieber.jpg") {
+                done("Naha, you don't.");
+            }
+            else { done(); }
+        }
+    };
+</script>
+<form action="@Url.Action("GaleriEkle","Properties", new { Area = "Admin" } )"
+      class="dropzone"
+      id="my-awesome-dropzone"></form>
+
+
