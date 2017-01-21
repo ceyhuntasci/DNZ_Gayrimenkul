@@ -612,88 +612,142 @@
                 <section class="widget">
                     <section class="widget-title uppercase">
                         <div class="inner">
-                            <h2>Refine Search</h2>
+                            <h2>Detaylı Arama</h2>
                         </div>
                     </section>
                     <section class="widget-content">
-                        <form action="">
+
+                        @using (Html.BeginForm("SearchRent", "Search", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
                             <div class="widget-section">
                                 <div class="inner">
-                                    <label for="location">Location</label>
-                                    <input type="text" name="location" id="location" class="input-block-level" value="Oxford">
+                                    <label for="location">Konum</label>
+                                    <select name="AdresIl" id="AdresIl" class="full"><option value="İSTANBUL" selected="">İSTANBUL</option></select>
+                                    <select name="AdresIlce" id="AdresIlce" class="full">
+                                        <option value="Seçiniz">Seçiniz</option>
+                                        <option value="ADALAR">ADALAR</option>
+                                        <option value="ARNAVUTKÖY">ARNAVUTKÖY</option>
+                                        <option value="ATAŞEHİR">ATAŞEHİR</option>
+                                        <option value="AVCILAR">AVCILAR</option>
+                                        <option value="BAĞCILAR">BAĞCILAR</option>
+                                        <option value="BAHÇELİEVLER">BAHÇELİEVLER</option>
+                                        <option value="BAKIRKÖY">BAKIRKÖY</option>
+                                        <option value="BAŞAKŞEHİR">BAŞAKŞEHİR</option>
+                                        <option value="BAYRAMPAŞA">BAYRAMPAŞA</option>
+                                        <option value="BEŞİKTAŞ">BEŞİKTAŞ</option>
+                                        <option value="BEYKOZ">BEYKOZ</option>
+                                        <option value="BEYLİKDÜZÜ">BEYLİKDÜZÜ</option>
+                                        <option value="BEYOĞLU">BEYOĞLU</option>
+                                        <option value="BÜYÜKÇEKMECE">BÜYÜKÇEKMECE</option>
+                                        <option value="ÇATALCA">ÇATALCA</option>
+                                        <option value="ÇEKMEKÖY">ÇEKMEKÖY</option>
+                                        <option value="ESENLER">ESENLER</option>
+                                        <option value="ESENYURT">ESENYURT</option>
+                                        <option value="EYÜP">EYÜP</option>
+                                        <option value="FATİH">FATİH</option>
+                                        <option value="GAZİOSMANPAŞA">GAZİOSMANPAŞA</option>
+                                        <option value="GÜNGÖREN">GÜNGÖREN</option>
+                                        <option value="KADIKÖY">KADIKÖY</option>
+                                        <option value="KAĞITHANE">KAĞITHANE</option>
+                                        <option value="KARTAL">KARTAL</option>
+                                        <option value="KÜÇÜKÇEKMECE">KÜÇÜKÇEKMECE</option>
+                                        <option value="MALTEPE">MALTEPE</option>
+                                        <option value="PENDİK">PENDİK</option>
+                                        <option value="SANCAKTEPE">SANCAKTEPE</option>
+                                        <option value="SARIYER">SARIYER</option>
+                                        <option value="SİLİVRİ">SİLİVRİ</option>
+                                        <option value="SULTANBEYLİ">SULTANBEYLİ</option>
+                                        <option value="SULTANGAZİ">SULTANGAZİ</option>
+                                        <option value="ŞİLE">ŞİLE</option>
+                                        <option value="ŞİŞLİ">ŞİŞLİ</option>
+                                        <option value="TUZLA">TUZLA</option>
+                                        <option value="ÜMRANİYE">ÜMRANİYE</option>
+                                        <option value="ÜSKÜDAR">ÜSKÜDAR</option>
+                                        <option value="ZEYTİNBURNU">ZEYTİNBURNU</option>
+                                    </select>
+                                    <select name="AdresMahalle" id="AdresMahalle" class="full">
+                                        <option value="Seçiniz">Seçiniz</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="widget-section">
                                 <div class="inner">
-                                    <label for="propertyType">Property Type</label>
-                                    <select name="propertyType" id="propertyType" class="btn-block selectpicker" style="display: none;">
-                                        <option value="all">All</option>
-                                        <option value="all">Mansion</option>
-                                        <option value="all">Apartment</option>
-                                    </select><div class="btn-group bootstrap-select btn-block"><button type="button" class="btn dropdown-toggle clearfix" data-toggle="dropdown" id="propertyType"><span class="filter-option pull-left">All</span>&nbsp;<span class="caret"></span></button><ul class="dropdown-menu" role="menu" style="max-height: 466px; overflow-y: auto; min-height: 0px;"><li rel="0" class="selected"><a tabindex="-1" href="#" class=""><span class="text">All</span><i class="icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="-1" href="#" class=""><span class="text">Mansion</span><i class="icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="-1" href="#" class=""><span class="text">Apartment</span><i class="icon-ok check-mark"></i></a></li></ul></div>
+                                    <label for="propertyType">Emlak Tipi</label>
+                                    <select name="emlakTipi" id="propertyType" class="btn-block selectpicker" style="display: none;">
+                                        <option>Bahçe Dubleksi</option>
+                                        <option>Bahçe Katı</option>
+                                        <option>Çatı Dubleksi</option>
+                                        <option>Daire</option>
+                                        <option>Dubleks</option>
+                                        <option>İkiz Ev</option>
+                                        <option>Müstakil Ev</option>
+                                        <option>Tripleks</option>
+                                        <option>Fourlex</option>
+                                    </select> 
                                 </div>
                             </div>
                             <div class="widget-section">
                                 <div class="inner">
-                                    <label for="category">Category</label>
-                                    <select name="propertyType" id="category" class="btn-block selectpicker" style="display: none;">
-                                        <option value="all">For Sale</option>
-                                        <option value="all">For Rent</option>
-                                        <option value="all">Forclosures</option>
-                                    </select><div class="btn-group bootstrap-select btn-block"><button type="button" class="btn dropdown-toggle clearfix" data-toggle="dropdown" id="category"><span class="filter-option pull-left">For Sale</span>&nbsp;<span class="caret"></span></button><ul class="dropdown-menu" role="menu" style="max-height: 368px; overflow-y: auto; min-height: 0px;"><li rel="0" class="selected"><a tabindex="-1" href="#" class=""><span class="text">For Sale</span><i class="icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="-1" href="#" class=""><span class="text">For Rent</span><i class="icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="-1" href="#" class=""><span class="text">Forclosures</span><i class="icon-ok check-mark"></i></a></li></ul></div>
+                                    <label for="category">İlan Tipi</label>
+                                    <select name="ilanTipi" id="category" class="btn-block selectpicker" style="display: none;">
+                                        <option >Konut Satılık</option>
+                                        <option >Konut Kiralık</option>
+                                        <option >Konuk Günlük Kiralık</option>
+                                        <option >İş Yeri Satılık</option>
+                                        <option >İş Yeri Kiralık</option>
+                                        <option >Arsa Satılık</option>
+                                        <option >Arsa Kiralık</option>
+                                        <option >Turistik İşletme Satılık</option>
+                                        <option >Turistik İşletme Kiralık</option>
+                                        <option >Devremülk Satılık</option>
+                                        <option>Devremülk Kiralık</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="widget-section first-half">
                                 <div class="inner">
-                                    <label for="minPrice">Min. Price</label>
-                                    <select name="propertyType" id="minPrice" class="btn-block selectpicker" style="display: none;">
-                                        <option value="all">$17K</option>
-                                        <option value="all">$27K</option>
-                                        <option value="all">$37K</option>
-                                    </select><div class="btn-group bootstrap-select btn-block"><button type="button" class="btn dropdown-toggle clearfix" data-toggle="dropdown" id="minPrice"><span class="filter-option pull-left">$17K</span>&nbsp;<span class="caret"></span></button><ul class="dropdown-menu" role="menu" style="max-height: 270px; overflow-y: auto; min-height: 0px;"><li rel="0" class="selected"><a tabindex="-1" href="#" class=""><span class="text">$17K</span><i class="icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="-1" href="#" class=""><span class="text">$27K</span><i class="icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="-1" href="#" class=""><span class="text">$37K</span><i class="icon-ok check-mark"></i></a></li></ul></div>
+                                    <label for="minPrice">Min. Fiyat</label> 
+                                    <input type="text" name='minFiyat' class="input-block-level" />
                                 </div>
                             </div>
                             <div class="widget-section second-half">
                                 <div class="inner">
-                                    <label for="maxPrice">Max. Price</label>
-                                    <select name="propertyType" id="maxPrice" class="btn-block selectpicker" style="display: none;">
-                                        <option value="all">$999K</option>
-                                        <option value="all">$899K</option>
-                                        <option value="all">$799K</option>
-                                    </select><div class="btn-group bootstrap-select btn-block"><button type="button" class="btn dropdown-toggle clearfix" data-toggle="dropdown" id="maxPrice"><span class="filter-option pull-left">$999K</span>&nbsp;<span class="caret"></span></button><ul class="dropdown-menu" role="menu" style="max-height: 270px; overflow-y: auto; min-height: 0px;"><li rel="0" class="selected"><a tabindex="-1" href="#" class=""><span class="text">$999K</span><i class="icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="-1" href="#" class=""><span class="text">$899K</span><i class="icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="-1" href="#" class=""><span class="text">$799K</span><i class="icon-ok check-mark"></i></a></li></ul></div>
+                                    <label for="maxPrice">Max. Fiyat</label> 
+                                    <input type="text" name='maxFiyat' class="input-block-level" /> 
                                 </div>
                             </div>
                             <div class="widget-section">
                                 <div class="inner">
-                                    <label for="bedrooms">Bedrooms</label>
-                                    <select name="propertyType" id="bedrooms" class="btn-block selectpicker" style="display: none;">
-                                        <option value="all">3</option>
-                                        <option value="all">2</option>
-                                        <option value="all">4</option>
-                                        <option value="all">5</option>
-                                    </select><div class="btn-group bootstrap-select btn-block"><button type="button" class="btn dropdown-toggle clearfix" data-toggle="dropdown" id="bedrooms"><span class="filter-option pull-left">3</span>&nbsp;<span class="caret"></span></button><ul class="dropdown-menu" role="menu" style="max-height: 172px; overflow-y: auto; min-height: 92px;"><li rel="0" class="selected"><a tabindex="-1" href="#" class=""><span class="text">3</span><i class="icon-ok check-mark"></i></a></li><li rel="1"><a tabindex="-1" href="#" class=""><span class="text">2</span><i class="icon-ok check-mark"></i></a></li><li rel="2"><a tabindex="-1" href="#" class=""><span class="text">4</span><i class="icon-ok check-mark"></i></a></li><li rel="3"><a tabindex="-1" href="#" class=""><span class="text">5</span><i class="icon-ok check-mark"></i></a></li></ul></div>
+                                    <label for="bedrooms">Salon</label>
+                                    <select name="salon" id="bedrooms" class="btn-block selectpicker" style="display: none;">
+                                        <option >1</option>
+                                        <option >2</option>
+                                        <option >3</option>
+                                    </select>
+                                    <label for="bedrooms">Oda</label>
+                                    <select name="oda" id="bedrooms" class="btn-block selectpicker" style="display: none;">
+                                        <option >1</option>
+                                        <option >2</option>
+                                        <option >3</option>
+                                        <option >4</option>
+                                        <option >5</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="widget-section">
                                 <div class="inner" style="position: relative;">
-                                    <label for="size">Size</label>
-                                    <input type="text" name="size" id="size" class="input-block-level" value="500">
+                                    <label for="size">Metrekare</label>
+                                    <input type="text" name="metrekare" id="size" class="input-block-level" value="500">
                                     <span class="measure-type">sqft</span>
-                                </div>
-                            </div>
-                            <div class="widget-section">
-                                <div class="inner">
-                                    <label for="range">Slide Example</label>
-                                    <div class="slider slider-horizontal" style="width: 230px;"><div class="slider-track"><div class="slider-selection" style="left: 29%; width: 49%;"></div><div class="slider-handle" style="left: 29%;"></div><div class="slider-handle" style="left: 78%;"></div></div><div class="tooltip top" style="top: -54px; left: 83.55px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">29 : 78</div></div><input type="text" name="size" id="range" class="input-block-level range-example"></div>
                                 </div>
                             </div>
                             <section class="widget-buttons">
                                 <div class="inner">
-                                    <a href="#" class="more-options">More Options</a> <br>
-                                    <a href="#" class="btn btn-primary btn-large btn-block">Update</a>
+                                 <button type="submit" class="btn btn-primary btn-large btn-block"><i class="icon-search icon-white"></i> Filtrele</button>
                                 </div>
                             </section>
-                        </form>
+                        }
                     </section>
                 </section>
             </aside>

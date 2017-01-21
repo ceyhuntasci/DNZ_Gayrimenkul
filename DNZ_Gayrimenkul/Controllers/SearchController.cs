@@ -22,9 +22,9 @@ namespace DNZ_Gayrimenkul.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult SearchRent(int? salon, int? oda, string minFiyat, string maxFiyat)
+        public ActionResult SearchRent(int? salon, int? oda, string minFiyat, string maxFiyat, string emlakTipi, string ilanTipi, string metrekare)
         {
-            List<Property> searchResult = db.Properties.Where(x => x.AdType.Name == "Konut Satılık").ToList();
+            List<Property> searchResult = db.Properties.Where(x => x.Address.City == "İstanbul").ToList();
 
 
             if (salon != null)
@@ -62,6 +62,30 @@ namespace DNZ_Gayrimenkul.Controllers
                 if (Int32.TryParse(maxFiyat, out max))
                 {
                     searchResult = searchResult.Where(x => x.Price <= max).ToList();
+                }
+                else
+                {
+
+                }
+            }
+            if (emlakTipi != null)
+            {
+                searchResult = searchResult.Where(x => x.PropertyType.Name == emlakTipi).ToList();
+            }
+            if (ilanTipi != null)
+            {
+                searchResult = searchResult.Where(x => x.AdType.Name == emlakTipi).ToList();
+            }
+            int metre2;
+            if(metrekare == "")
+            {
+                metrekare = "0";
+            }
+            if(metrekare != "0")
+            {
+                if (Int32.TryParse(metrekare, out metre2))
+                {
+                    searchResult = searchResult.Where(x => x.Price >= metre2).ToList();
                 }
                 else
                 {
