@@ -1,0 +1,283 @@
+﻿@model DNZ_Gayrimenkul.Models.Property
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Address.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildingType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuildingType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConstructionType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConstructionType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeedStatus.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeedStatus.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Floor.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Floor.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeatingType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeatingType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyStatus.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyStatus.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsageStatus.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsageStatus.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HallCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HallCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BathCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BathCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.M2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.M2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildingFloors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuildingFloors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TradeAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TradeAvailable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentAvailable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocatedInSite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocatedInSite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.North)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.North)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.South)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.South)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.East)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.East)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.West)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.West)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsFeatured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsFeatured)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentRevenue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentRevenue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlyFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlyFee)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
