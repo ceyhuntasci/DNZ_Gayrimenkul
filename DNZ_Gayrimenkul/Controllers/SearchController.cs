@@ -17,7 +17,7 @@ namespace DNZ_Gayrimenkul.Controllers
         // GET: Search
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
