@@ -68,22 +68,27 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
                             <div class='inner'>
-                                <form action="">
-                                    <select name="search-bedrooms" class='span2 selectpicker search-select'>
-                                        <option>Salon</option>
+                                @using (Html.BeginForm("SearchSale", "Search", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <select name="salon" class='span2 selectpicker search-select'>
+                                        <option value="" disabled selected style="display: none;">Salon</option>
                                         <option>1</option>
                                         <option>2</option>
                                     </select>
-                                    <select name="search-bathrooms" class='span2 selectpicker search-select'>
-                                        <option>Oda</option>
+                                    <select name="oda" class='span2 selectpicker search-select'>
+                                        <option value="" disabled selected style="display: none;">Oda</option>
                                         <option>1</option>
                                         <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
                                     </select>
-                                    <input type="text" name='search-min-price' class='span2 search-price no-margin' placeholder="Min. Fiyat" />
+                                    <input type="text" name='minFiyat' class='span2 search-price no-margin' placeholder="Min. Fiyat" />
                                     <span class='line-divider'>&ndash;</span>
-                                    <input type="text" name='search-max-price' class='span2 search-price' placeholder="Max. Fiyat" />
+                                    <input type="text" name='maxFiyat' class='span2 search-price' placeholder="Max. Fiyat" />
                                     <button type="submit" class='btn btn-primary search-property'><i class="icon-search icon-white"></i> Ara</button>
-                                </form>
+                                }
                             </div>
                         </div>
                         <div class="tab-pane" id="tab2">
@@ -93,14 +98,17 @@
                                 {
                                     @Html.AntiForgeryToken()
                                     <select name="salon" class='span2 selectpicker search-select'>
+                                        <option value="" disabled selected style="display: none;">Salon</option>
                                         <option>1</option>
                                         <option>2</option>
                                     </select>
                                     <select name="oda" class='span2 selectpicker search-select'>
+                                        <option value="" disabled selected style="display: none;">Oda</option>          
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
+                                        <option>5</option>
                                     </select>
                                     <input type="text" name='minFiyat' class='span2 search-price no-margin' placeholder="Min. Fiyat" />
                                     <span class='line-divider'>&ndash;</span>

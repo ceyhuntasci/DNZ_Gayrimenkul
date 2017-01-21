@@ -12,274 +12,41 @@
             <section class='container'>
                 <section class='row featured-items'>
                     <section class='span9'>
-
                         <div class='row'>
                             <div class='span9 featured-item-wrapper featured-item-list'>
-                                <div class='featured-item featured-list'>
-                                    <div class='top'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <figure>
-                                                    <img src="img/photos/4834194361_85d5c4a5e0_b.jpg" alt="" />
-                                                    <div class='banner'>For Sale</div>
-                                                    <a href="property.html" class='figure-hover'>Zoom</a>
-                                                </figure>
-                                                <div class='right'>
-                                                    <h3><a href="property.html">1 Central Park S</a></h3>
-                                                    <p>Las Vegas, NV</p>
-                                                    <div class='description'>
-                                                        <p>Aliquam luctus, metus eu hendrerit bibendum, justo orci pulvinar enim, sed euismod risus tellus eu mi. Vivamus accumsan adipiscing leo quis suscipit. In hac habitasse platea dictumst.</p>
-                                                    </div>
-                                                    <div class='price-wrapper'>
-                                                        <div class='price'>$1,499</div>
-                                                        <div class='rate'>/month</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='bottom'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <p>4 beds  +  2 baths  +  245 sqft</p>
-                                                <div class='star-rating'>
-                                                    <button class='star active'>1 Star</button>
-                                                    <button class='star active'>2 Star</button>
-                                                    <button class='star active'>3 Star</button>
-                                                    <button class='star active'>4 Star</button>
-                                                    <button class='star active'>5 Star</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='featured-item featured-list'>
-                                    <div class='top'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <figure>
-                                                    <img src="img/photos/4834197589_84d75a42bd_b.jpg" alt="" />
-                                                    <div class='banner'>For Sale</div>
-                                                    <a href="property.html" class='figure-hover'>Zoom</a>
-                                                </figure>
-                                                <div class='right'>
-                                                    <h3><a href="property.html">555 Malcolm X Blvd</a></h3>
-                                                    <p>Los Angeles, CA</p>
-                                                    <div class='description'>
-                                                        <p>Aliquam luctus, metus eu hendrerit bibendum, justo orci pulvinar enim, sed euismod risus tellus eu mi. Vivamus accumsan adipiscing leo quis suscipit. In hac habitasse platea dictumst.</p>
-                                                    </div>
-                                                    <div class='price-wrapper'>
-                                                        <div class='price'>$11,000</div>
-                                                        <div class='rate'>/year</div>
+                                @foreach (var i in Model )
+                                {
+                                    <div class='featured-item featured-list'>
+                                        <div class='top'>
+                                            <div class='inner-border'>
+                                                <div class='inner-padding'>
+                                                    <figure>
+                                                        <img src="img/photos/4834194361_85d5c4a5e0_b.jpg" alt="" />
+                                                        <div class='banner'>@i.AdType.Name</div>
+                                                        <a href="@Url.Action("Details", "Properties", new { id = i.ID })" class='figure-hover'>Zoom</a>
+                                                    </figure>
+                                                    <div class='right'>
+                                                        <h3><a href="property.html">@i.Title</a></h3>
+                                                        <p>@i.Address.Country, @i.Address.City, @i.Address.District</p>
+                                                        <div class='description'>
+                                                            <p>@i.Description</p>
+                                                        </div>
+                                                        <div class='price-wrapper'>
+                                                            <div class='price'>@i.Price TL</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class='bottom'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <p>4 beds  +  2 baths  +  245 sqft</p>
-                                                <div class='star-rating'>
-                                                    <button class='star active'>1 Star</button>
-                                                    <button class='star active'>2 Star</button>
-                                                    <button class='star active'>3 Star</button>
-                                                    <button class='star active'>4 Star</button>
-                                                    <button class='star active'>5 Star</button>
+                                        <div class='bottom'>
+                                            <div class='inner-border'>
+                                                <div class='inner-padding'>
+                                                    <p>@i.HallCount Salon +  @i.RoomCount Oda +  @i.M2 M2</p>  
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class='featured-item featured-list'>
-                                    <div class='top'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <figure>
-                                                    <img src="img/photos/4834201025_e7f66118eb_b.jpg" alt="" />
-                                                    <div class='banner'>For Sale</div>
-                                                    <a href="property.html" class='figure-hover'>Zoom</a>
-                                                </figure>
-                                                <div class='right'>
-                                                    <h3><a href="property.html">520 W 110th St</a></h3>
-                                                    <p>Las Vegas, NV</p>
-                                                    <div class='description'>
-                                                        <p>Aliquam luctus, metus eu hendrerit bibendum, justo orci pulvinar enim, sed euismod risus tellus eu mi. Vivamus accumsan adipiscing leo quis suscipit. In hac habitasse platea dictumst.</p>
-                                                    </div>
-                                                    <div class='price-wrapper'>
-                                                        <div class='price'>$14,100</div>
-                                                        <div class='rate'>/year</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='bottom'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <p>4 beds  +  2 baths  +  245 sqft</p>
-                                                <div class='star-rating'>
-                                                    <button class='star active'>1 Star</button>
-                                                    <button class='star active'>2 Star</button>
-                                                    <button class='star active'>3 Star</button>
-                                                    <button class='star active'>4 Star</button>
-                                                    <button class='star active'>5 Star</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='featured-item featured-list'>
-                                    <div class='top'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <figure>
-                                                    <img src="img/photos/4834203945_3e56a09048_b.jpg" alt="" />
-                                                    <div class='banner'>For Sale</div>
-                                                    <a href="property.html" class='figure-hover'>Zoom</a>
-                                                </figure>
-                                                <div class='right'>
-                                                    <h3><a href="property.html">100 W 57th St</a></h3>
-                                                    <p>Los Angeles, CA</p>
-                                                    <div class='description'>
-                                                        <p>Aliquam luctus, metus eu hendrerit bibendum, justo orci pulvinar enim, sed euismod risus tellus eu mi. Vivamus accumsan adipiscing leo quis suscipit. In hac habitasse platea dictumst.</p>
-                                                    </div>
-                                                    <div class='price-wrapper'>
-                                                        <div class='price'>$12,300</div>
-                                                        <div class='rate'>/year</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='bottom'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <p>4 beds  +  2 baths  +  245 sqft</p>
-                                                <div class='star-rating'>
-                                                    <button class='star active'>1 Star</button>
-                                                    <button class='star active'>2 Star</button>
-                                                    <button class='star active'>3 Star</button>
-                                                    <button class='star active'>4 Star</button>
-                                                    <button class='star active'>5 Star</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='featured-item featured-list'>
-                                    <div class='top'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <figure>
-                                                    <img src="img/photos/4834790926_0228ed6cde_b.jpg" alt="" />
-                                                    <div class='banner'>For Sale</div>
-                                                    <a href="property.html" class='figure-hover'>Zoom</a>
-                                                </figure>
-                                                <div class='right'>
-                                                    <h3><a href="property.html">140 E 63rd St</a></h3>
-                                                    <p>Boston, MA</p>
-                                                    <div class='description'>
-                                                        <p>Aliquam luctus, metus eu hendrerit bibendum, justo orci pulvinar enim, sed euismod risus tellus eu mi. Vivamus accumsan adipiscing leo quis suscipit. In hac habitasse platea dictumst.</p>
-                                                    </div>
-                                                    <div class='price-wrapper'>
-                                                        <div class='price'>$1,099</div>
-                                                        <div class='rate'>/month</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='bottom'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <p>4 beds  +  2 baths  +  245 sqft</p>
-                                                <div class='star-rating'>
-                                                    <button class='star active'>1 Star</button>
-                                                    <button class='star active'>2 Star</button>
-                                                    <button class='star active'>3 Star</button>
-                                                    <button class='star active'>4 Star</button>
-                                                    <button class='star active'>5 Star</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='featured-item featured-list'>
-                                    <div class='top'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <figure>
-                                                    <img src="img/photos/4834812234_3379989227_b.jpg" alt="" />
-                                                    <div class='banner'>For Sale</div>
-                                                    <a href="property.html" class='figure-hover'>Zoom</a>
-                                                </figure>
-                                                <div class='right'>
-                                                    <h3><a href="property.html">161 E 110th St</a></h3>
-                                                    <p>Los Angeles, CA</p>
-                                                    <div class='description'>
-                                                        <p>Aliquam luctus, metus eu hendrerit bibendum, justo orci pulvinar enim, sed euismod risus tellus eu mi. Vivamus accumsan adipiscing leo quis suscipit. In hac habitasse platea dictumst.</p>
-                                                    </div>
-                                                    <div class='price-wrapper'>
-                                                        <div class='price'>$19,499</div>
-                                                        <div class='rate'>/year</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='bottom'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <p>4 beds  +  2 baths  +  245 sqft</p>
-                                                <div class='star-rating'>
-                                                    <button class='star active'>1 Star</button>
-                                                    <button class='star active'>2 Star</button>
-                                                    <button class='star active'>3 Star</button>
-                                                    <button class='star active'>4 Star</button>
-                                                    <button class='star active'>5 Star</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class='featured-item featured-list'>
-                                    <div class='top'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <figure>
-                                                    <img src="img/photos/4834826842_cdeb5bc8be_b.jpg" alt="" />
-                                                    <div class='banner'>For Sale</div>
-                                                    <a href="property.html" class='figure-hover'>Zoom</a>
-                                                </figure>
-                                                <div class='right'>
-                                                    <h3><a href="property.html">East 61st Street and Park Avenue</a></h3>
-                                                    <p>Los Angeles, CA</p>
-                                                    <div class='description'>
-                                                        <p>Aliquam luctus, metus eu hendrerit bibendum, justo orci pulvinar enim, sed euismod risus tellus eu mi. Vivamus accumsan adipiscing leo quis suscipit. In hac habitasse platea dictumst.</p>
-                                                    </div>
-                                                    <div class='price-wrapper'>
-                                                        <div class='price'>$12,500</div>
-                                                        <div class='rate'>/year</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='bottom'>
-                                        <div class='inner-border'>
-                                            <div class='inner-padding'>
-                                                <p>4 beds  +  2 baths  +  245 sqft</p>
-                                                <div class='star-rating'>
-                                                    <button class='star active'>1 Star</button>
-                                                    <button class='star active'>2 Star</button>
-                                                    <button class='star active'>3 Star</button>
-                                                    <button class='star active'>4 Star</button>
-                                                    <button class='star active'>5 Star</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                }    
                             </div>
                         </div>
                         <div class="pagination">
