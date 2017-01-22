@@ -215,7 +215,7 @@
                                                     </div>
                                                 </div>                                    
                                                 <div class='price-wrapper'>
-                                                    <div class='price'>$@Model.Properties.ElementAt(i).Price</div>                                          
+                                                    <div class='price'>$@Model.Properties.ElementAt(i).Price.ToString("N")</div>                                          
                                                 </div>
                                            </div>
                                         </text>
@@ -247,7 +247,7 @@
                                                 </div>
                                             </div>
                                             <div class='price-wrapper'>
-                                                <div class='price'>$@Model.Properties.ElementAt(i).Price</div>
+                                                <div class='price'>$@Model.Properties.ElementAt(i).Price.ToString("N")</div>
                                             </div>
                                         </div>
                                          @:</div>
@@ -279,7 +279,7 @@
                                                 </div>
                                             </div>
                                             <div class='price-wrapper'>
-                                                <div class='price'>$@Model.Properties.ElementAt(i).Price</div>
+                                                <div class='price'>$@Model.Properties.ElementAt(i).Price.ToString("N")</div>
                                             </div>
                                         </div>
                                     }
